@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Admin Dashboard</title>
+<link rel="icon" href="favicon-32x32.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+<section id="login" class="login-wrap" hidden>
+  <form id="login-form" class="form-card" style="max-width:400px;width:92%">
+    <h1 style="font-size:1.4rem;margin-bottom:6px">Admin sign in</h1>
+    <p style="color:var(--muted);margin-bottom:18px;font-size:.9rem">Authorized administrators only. There is no public registration.</p>
+    <label for="l-email">Email</label><input id="l-email" type="email" required autocomplete="username">
+    <label for="l-pass">Password</label><input id="l-pass" type="password" required autocomplete="current-password">
+    <button class="btn btn-primary" style="width:100%" type="submit">Sign in</button>
+    <div class="form-status" id="login-status" role="alert"></div>
+  </form>
+</section>
+<section id="notconfigured" class="login-wrap" hidden><div class="form-card" style="max-width:520px"><h1 style="font-size:1.3rem">Backend not configured</h1><p style="color:var(--muted)">Fill in <code>SUPABASE_URL</code> and <code>SUPABASE_ANON_KEY</code> in <code>config.js</code> (see SETUP.md), then reload.</p></div></section>
+
+<div id="app" hidden>
+  <header class="a-top"><button class="icon-btn" id="a-menu" aria-label="Menu"><i class="fas fa-bars"></i></button><strong>Admin</strong><span id="a-user" class="a-user"></span><button class="icon-btn" id="theme-toggle" aria-label="Theme"><i class="fas fa-sun"></i></button></header>
+  <aside id="a-nav" class="a-nav"></aside>
+  <main id="a-main" class="a-main"></main>
+</div>
+<div id="modal" class="modal" hidden><div class="modal-box" role="dialog" aria-modal="true"><div id="modal-body"></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

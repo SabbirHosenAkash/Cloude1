@@ -1,0 +1,23 @@
+{
+  "name": "Sabbir Hosen Akash",
+  "short_name": "Writarion",
+  "description": "Official portfolio of Sabbir Hosen Akash (Writarion).",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#07090b",
+  "background_color": "#07090b",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
